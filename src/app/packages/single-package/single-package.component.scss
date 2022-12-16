@@ -6,7 +6,7 @@ $greenColor: rgb(45, 213, 196);
     margin: 0;
   }
   width: 100%;
-  min-width: 280px;
+  min-width: 320px;
   height: 90%;
   border: lightgray 0.5px solid;
   display: flex;
@@ -21,10 +21,12 @@ $greenColor: rgb(45, 213, 196);
 
     .web-exclusive {
       position: absolute;
-      top: -20px;
+      top: -12px;
       left: 15px;
+      @include useFont(11px, simpler-black);
+
       img {
-        width: 40px;
+        width: 45px;
       }
       span {
         position: absolute;
@@ -34,7 +36,7 @@ $greenColor: rgb(45, 213, 196);
     }
 
     .package-title {
-      @include useFont(30px, simpler-black);
+      @include useFont(22px, simpler-black);
     }
     .price {
       margin: 0;
@@ -59,7 +61,7 @@ $greenColor: rgb(45, 213, 196);
     flex-direction: column;
     height: 100%;
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     .details {
       list-style: none;
@@ -86,6 +88,7 @@ $greenColor: rgb(45, 213, 196);
       text-align: center;
       border: $greenColor solid 1px;
       // padding: 10%;
+      padding: 17% 10% 17% 10%;
       width: 80%;
       // margin: auto;
       height: 15%;
@@ -106,7 +109,7 @@ $greenColor: rgb(45, 213, 196);
       }
       .data {
         @include useFont(20px, simpler-black);
-        white-space: nowrap;
+        // white-space: nowrap;
         line-height: 1;
         text-align: center;
       }
@@ -116,22 +119,26 @@ $greenColor: rgb(45, 213, 196);
       color: white;
       @include useFont(15px, simpler-bold);
       border: 0;
+      width: 80%;
+      height: 12%;
     }
-
-    &:hover {
-      transform: scale(1.1);
+  }
+  &:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    box-shadow: -1px -1px 37px 0px rgba(0, 0, 0, 0.75);
+    .card-header {
+      .package-title {
+        color: white;
+      }
+      background-image: url("../../../assets/images/package_bg_selected.png");
+      border: 0.5px solid $greenColor;
+    }
+    .join-button {
+      color: black !important;
       cursor: pointer;
-      .card-header {
-        .package-title {
-          color: white;
-        }
-        background-image: url("../../../assets/images/package_bg_selected.png");
-      }
-      .join-button {
-        color: black;
 
-        background-color: $greenColor;
-      }
+      background-color: $greenColor !important;
     }
   }
 }

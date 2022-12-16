@@ -1,0 +1,27 @@
+@import "../../../Styles/fonts.scss";
+.benefits-wrapper {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  //   justify-content: space-around;
+  padding: 0 14% 0 14%;
+  .benefit {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80%;
+
+    .benefit-icon {
+      width: 50px;
+      height: 50px;
+    }
+    .benefit-text {
+      margin: 0;
+      line-height: 1;
+      width: 50%;
+      @include useFont(15px, simpler-regular);
+    }
+  }
+}

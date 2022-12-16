@@ -1,0 +1,48 @@
+.carousel-wrapper {
+  height: 100%;
+  width: 100%;
+
+  background-image: url("../../../assets/images/packs_BG.png");
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+
+  .card-wrapper-single-package {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    height: 90%;
+  }
+  .dots {
+    display: flex;
+    height: 10%;
+    margin: auto;
+    width: 5%;
+    justify-content: space-evenly;
+    align-items: center;
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      border: 1px solid gray;
+    }
+  }
+  .arrow {
+    width: 25px;
+    height: 25px;
+    // position: absolute;
+    top: 50%;
+    align-self: center;
+    &:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+  }
+  .left-arrow {
+    // left: 200px;
+  }
+  .right-arrow {
+    // right: 200px;
+  }
+}

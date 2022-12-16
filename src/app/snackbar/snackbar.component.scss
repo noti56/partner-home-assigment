@@ -1,0 +1,21 @@
+@import "../../Styles/fonts.scss";
+.snackbar-container {
+  width: 250px;
+  position: absolute;
+  z-index: 9999;
+  color: white;
+  right: 0;
+  -webkit-animation: fadein_from_right 2s linear; /* Safari, Chrome and Opera > 12.1 */
+  text-align: center;
+  @include useFont(16px, "simpler-bold");
+  border-radius: 20px;
+}
+@keyframes fadein_from_right {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+  }
+}

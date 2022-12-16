@@ -1,0 +1,25 @@
+.auth-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 30%;
+    width: 50%;
+    input,
+    button {
+      outline: none;
+      height: 10%;
+      width: 50%;
+
+      border-radius: 20px;
+    }
+  }
+}

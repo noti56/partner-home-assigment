@@ -1,0 +1,29 @@
+<div class="carousel-wrapper" dir="ltr">
+  <!-- <ng-template > -->
+  <div class="card-wrapper-single-package">
+    <img
+      class="arrow left-arrow"
+      src="../../../assets/images/left arrow.png"
+      alt=""
+    />
+
+    <app-single-package
+      (mouseenter)="hoverOnCard(package._id)"
+      style="display: flex; flex-direction: column; justify-content: center"
+      *ngFor="let package of items"
+      [package]="package"
+    ></app-single-package>
+
+    <img
+      class="arrow right-arrow"
+      src="../../../assets/images/right arrow.png"
+      alt=""
+    />
+  </div>
+  <!-- </ng-template> -->
+  <div class="dots">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+</div>

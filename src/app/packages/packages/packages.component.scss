@@ -1,0 +1,29 @@
+@import "../../../Styles/fonts.scss";
+
+.packages-wrapper {
+  width: 100%;
+  height: 100%;
+  .headline {
+    line-height: 1;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    margin-right: 17%;
+    // height: 20%;
+    .name-hey {
+      @include useFont(12px, simpler-black);
+    }
+    .partner-keeps {
+      @include useFont(38px, simpler-black);
+    }
+    .connected-always {
+      @include useFont(75px, simpler-black);
+    }
+  }
+  .app-carousel-pacakges {
+    height: 67%;
+  }
+  footer {
+    height: 19.7%;
+  }
+}

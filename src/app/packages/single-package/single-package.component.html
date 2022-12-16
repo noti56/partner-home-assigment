@@ -1,0 +1,31 @@
+<div class="card-wrapper">
+  <header class="card-header" [ngClass]="'white-background'">
+    <span *ngIf="package.isWebExclusive" class="web-exclusive">
+      <img src="../../../assets/images/yellow_icon.png" alt="" />
+      <span>בלעדי באתר!</span>
+    </span>
+    <p class="package-title" [ngClass]="'black-text'">
+      {{ package.title }}
+    </p>
+    <p class="price">₪{{ package.pricePerMonth }}</p>
+    <p class="month">לחודש</p>
+  </header>
+  <div class="card-body">
+    <ul class="details">
+      <li *ngFor="let d of package.details">{{ d }}</li>
+    </ul>
+
+    <div class="web-orders">
+      <span class="gift-icon-wrapper">
+        <img
+          class="gift-icon"
+          src="../../../assets/images/gift_icon.png"
+          alt=""
+        />
+      </span>
+      <span class="title">בלעדי למזמינים באתר</span>
+      <span class="data">{{ package.forWebOrders }}</span>
+    </div>
+    <button class="join-button"><< להצטרפות</button>
+  </div>
+</div>

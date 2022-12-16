@@ -1,0 +1,23 @@
+<div class="packages-wrapper">
+  <p class="headline">
+    <span class="name-hey"> היי {{ userDataService.getUserName() }}</span>
+    <span class="partner-keeps"> פרטנר שומרת עליכם</span>
+    <span class="connected-always"> מחוברים תמיד</span>
+  </p>
+
+  <div class="app-carousel-pacakges">
+    <app-carousel
+      (hoverOnCardEvent)="setSelected($event)"
+      [itemType]="'packages'"
+      [items]="packages"
+    ></app-carousel>
+  </div>
+
+  <footer>
+    <!-- {{ benefitsByItems[packages[0]._id] | json }} -->
+    <app-benefits
+      *ngIf="selected"
+      [benefits]="benefitsByItems[selected]"
+    ></app-benefits>
+  </footer>
+</div>

@@ -1,0 +1,11 @@
+<div *ngIf="snackbarService.getSnackbar() | async; let snackbar">
+  <div
+    class="snackbar-container"
+    *ngIf="snackbar"
+    [ngStyle]="{
+      backgroundColor: snackbar.backgroundColor ? snackbar.backgroundColor : ''
+    }"
+  >
+    {{ snackbar.text }}
+  </div>
+</div>

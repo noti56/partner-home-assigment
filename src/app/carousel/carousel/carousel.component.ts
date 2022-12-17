@@ -23,6 +23,7 @@ export class CarouselComponent implements OnInit, OnChanges {
   @Output() hoverOnCardEvent = new EventEmitter<string>();
   currentSlide: number = 0;
   filteredItems: IPackage[] = [];
+  hoveredCardIndex: number = 0;
   constructor() {}
 
   ngOnInit(): void {
@@ -42,6 +43,7 @@ export class CarouselComponent implements OnInit, OnChanges {
   }
   hoverOnCard(card_id: string) {
     this.hoverOnCardEvent.emit(card_id);
+    this.hoveredCardIndex = this.items.findIndex((item) => item._id == card_id);
   }
 
   setFiltered() {

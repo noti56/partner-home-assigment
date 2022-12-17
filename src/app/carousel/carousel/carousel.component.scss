@@ -1,3 +1,4 @@
+@import "../../../Styles/colors.scss";
 .carousel-wrapper {
   height: 100%;
   width: 100%;
@@ -14,11 +15,6 @@
     justify-content: space-evenly;
     position: relative;
     height: 90%;
-    .slide {
-      object-fit: cover;
-      // zoom effect on hover
-      transition: transform 150ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
-    }
   }
   .dots {
     display: flex;
@@ -32,6 +28,9 @@
       height: 8px;
       border-radius: 50%;
       border: 1px solid gray;
+    }
+    .hovered-dot {
+      background-color: $greenColor;
     }
   }
   .arrow {

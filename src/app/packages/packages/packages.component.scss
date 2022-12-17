@@ -9,14 +9,16 @@
     display: flex;
     flex-direction: column;
     margin-right: 17%;
-    // height: 20%;
+    height: 12.3%;
+
     .name-hey {
       @include useFont(12px, simpler-black);
     }
     .partner-keeps {
-      @include useFont(38px, simpler-black);
+      @include useFont(32.5px, simpler-black);
     }
     .connected-always {
+      line-height: 38px;
       @include useFont(75px, simpler-black);
     }
   }

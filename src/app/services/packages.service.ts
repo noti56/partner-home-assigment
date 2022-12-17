@@ -135,6 +135,48 @@ export class PackagesService {
         },
       ],
     },
+    {
+      _id: generateId(),
+      title: 'החבילה הסבירה',
+      pricePerMonth: 59.9,
+      isWebExclusive: false,
+      details: [
+        'ללא הגבלת SMS שיחות והודעות',
+        'חבילת גלישה בנפח 15GB',
+        '100 דק לחול',
+      ],
+      forWebOrders: 'CyberGuard לשנה ללא עלות',
+      benefits: [
+        {
+          icon: 'earth.png',
+          text: 'גלישה ב20,000 עמודי אינטרנט',
+        },
+        {
+          icon: 'spiral.png',
+          text: '1010 שעות של שיחה על גבי האינטרנט',
+        },
+        {
+          icon: 'mail.png',
+          text: 'לשלוח 260,400 מיילים',
+        },
+        {
+          icon: 'video.png',
+          text: '12 שעות צפייה בוידאו באיכות HD',
+        },
+        {
+          icon: 'chat.png',
+          text: 'לשלוח או לקבל 480,000 תמונות או 24,000,000 הודעות',
+        },
+        {
+          icon: 'music.png',
+          text: 'לנגן 7000 שירים',
+        },
+        {
+          icon: 'like.png',
+          text: 'לבלות 264 שעות ברשתות חברתיות',
+        },
+      ],
+    },
   ];
   getPackages(): IPackage[] {
     return this.packages;

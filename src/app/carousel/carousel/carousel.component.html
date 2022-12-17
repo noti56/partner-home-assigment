@@ -2,19 +2,22 @@
   <!-- <ng-template > -->
   <div class="card-wrapper-single-package">
     <img
+      (click)="previousNext(-1)"
       class="arrow left-arrow"
       src="../../../assets/images/left arrow.png"
       alt=""
     />
 
     <app-single-package
+      class="slide"
       (mouseenter)="hoverOnCard(package._id)"
       style="display: flex; flex-direction: column; justify-content: center"
-      *ngFor="let package of items"
+      *ngFor="let package of filteredItems; let i = index"
       [package]="package"
     ></app-single-package>
 
     <img
+      (click)="previousNext(1)"
       class="arrow right-arrow"
       src="../../../assets/images/right arrow.png"
       alt=""

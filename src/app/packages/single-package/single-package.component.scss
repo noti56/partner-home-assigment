@@ -68,13 +68,24 @@ $greenColor: rgb(45, 213, 196);
       margin: 0;
       padding: 0;
       width: 80%;
-      // margin: auto;
+
+      height: 25%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       li {
         @include useFont(16px, simpler-regular);
         text-align: center;
         white-space: nowrap;
+        // padding:  3% 0 3% 0 ;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
       }
       li:nth-child(even) {
+        height: 40%;
+
         border-top: 0.5px solid lightgray;
         border-bottom: 0.5px solid lightgray;
         @include useFont(20px, simpler-black);

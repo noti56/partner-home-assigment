@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { SnackbarComponent } from './snackbar/snackbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { PricePipe } from './pipes/price.pipe';
 @NgModule({
   declarations: [AppComponent, SnackbarComponent],
   imports: [
@@ -14,7 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

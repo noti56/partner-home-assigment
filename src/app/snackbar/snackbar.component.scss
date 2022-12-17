@@ -5,9 +5,9 @@
   z-index: 9999;
   color: white;
   right: 0;
-  -webkit-animation: fadein_from_right 2s linear; /* Safari, Chrome and Opera > 12.1 */
+  animation: fadein_from_right 2s linear;
   text-align: center;
-  @include useFont(16px, "simpler-bold");
+  @include useFont(16, "simpler-bold");
   border-radius: 20px;
 }
 @keyframes fadein_from_right {

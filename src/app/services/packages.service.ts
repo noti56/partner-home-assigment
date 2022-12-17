@@ -17,9 +17,9 @@ export class PackagesService {
       details: [
         'ללא הגבלת SMS שיחות והודעות',
         'חבילת גלישה בנפח 25GB',
-        '1000 דק לחול',
+        '1000 דק לחו"ל',
       ],
-      forWebOrders: 'SIM כרטיס  במתנה',
+      forWebOrders: 'כרטיס SIM במתנה',
       benefits: [
         {
           icon: 'earth.png',
@@ -101,7 +101,7 @@ export class PackagesService {
       details: [
         'ללא הגבלת SMS שיחות והודעות',
         'חבילת גלישה בנפח 15GB',
-        '100 דק לחול',
+        '100 דק לחו"ל',
       ],
       forWebOrders: 'CyberGuard לשנה ללא עלות',
       benefits: [
@@ -143,7 +143,7 @@ export class PackagesService {
       details: [
         'ללא הגבלת SMS שיחות והודעות',
         'חבילת גלישה בנפח 15GB',
-        '100 דק לחול',
+        '100 דק לחו"ל',
       ],
       forWebOrders: 'CyberGuard לשנה ללא עלות',
       benefits: [

@@ -23,7 +23,7 @@
       margin: 0;
       line-height: 1;
       width: 50%;
-      @include useFont(15px, simpler-regular);
+      @include useFont(15, simpler-regular);
     }
     &:hover {
       .benefit-icon {

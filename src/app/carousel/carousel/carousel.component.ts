@@ -1,6 +1,7 @@
 import {
   Component,
   EventEmitter,
+  HostListener,
   Input,
   OnChanges,
   OnInit,
@@ -10,7 +11,10 @@ import {
 import { IPackage } from 'src/types/interfaces/package.interface';
 import { ICarouselItemType } from 'src/types/types/CaruselleItems.type';
 
-const numsOfCards = 3;
+interface IScreenSize {
+  height: number;
+  width: number;
+}
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
@@ -21,26 +25,43 @@ export class CarouselComponent implements OnInit, OnChanges {
   @Input() items: IPackage[] = [];
   //@Output() // לטפל בלקיחת מידע מההיתרונות הרלוונטים
   @Output() hoverOnCardEvent = new EventEmitter<string>();
+
+  numsOfCards = 3;
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.calcScreenSize({
+      height: event.target.innerHeight,
+      width: event.target.innerWidth,
+    });
+  }
   currentSlide: number = 0;
   filteredItems: IPackage[] = [];
   hoveredCardIndex: number = 0;
   constructor() {}
 
-  ngOnInit(): void {
-    console.log('carusslele', this.items, this.itemType);
+  calcScreenSize(screenSize: IScreenSize) {
+    if (screenSize.width > 320 && screenSize.width < 640) {
+      console.log(1);
 
-    // if (this.items) {
-    //   //set the selected item as the middle in the Array.
-    //   const index = Math.floor(this.items.length / 2);
-    //   this.setSelected(index);
-    // }
-
+      this.numsOfCards = 1;
+    } else if (screenSize.width > 640 && screenSize.width < 1024) {
+      console.log(2);
+      this.numsOfCards = 2;
+    } else if (screenSize.width > 1025) {
+      console.log(3);
+      this.numsOfCards = 3;
+    }
     this.setFiltered();
   }
-
-  ngOnChanges(changes: SimpleChanges): void {
-    // console.log(changes);
+  ngOnInit(): void {
+    this.calcScreenSize({
+      height: window.innerHeight,
+      width: window.innerWidth,
+    });
   }
+  ngOnChanges(changes: SimpleChanges): void {}
+
   hoverOnCard(card_id: string) {
     this.hoverOnCardEvent.emit(card_id);
     this.hoveredCardIndex = this.items.findIndex((item) => item._id == card_id);
@@ -49,13 +70,13 @@ export class CarouselComponent implements OnInit, OnChanges {
   setFiltered() {
     this.filteredItems = this.items.slice(
       this.currentSlide,
-      this.currentSlide + numsOfCards
+      this.currentSlide + this.numsOfCards
     );
   }
 
   previousNext(amount: number) {
     if (
-      this.currentSlide + amount + numsOfCards > this.items.length ||
+      this.currentSlide + amount + this.numsOfCards > this.items.length ||
       (this.currentSlide == 0 && amount == -1)
     )
       return;

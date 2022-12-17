@@ -56,6 +56,7 @@
       .coin {
         // padding-left: 5px;
         @include useFont(38, simpler-bold);
+
         padding-top: 0.8em;
         // align-self: flex-end;
       }
@@ -129,10 +130,9 @@
       text-align: center;
       border: $greenColor solid 1px;
       // padding: 10%;
-      padding: 11% 5% 11% 5%;
-      width: 80%;
-      // margin: auto;
-      height: 15%;
+
+      width: 85%;
+      height: 20%;
       .gift-icon-wrapper {
         background-color: white;
         padding: 5px;
@@ -149,8 +149,7 @@
         @include useFont(17, simpler-regular);
       }
       .data {
-        margin: auto;
-        @include useFont(20, simpler-black);
+        @include useFont(18, simpler-black);
         // white-space: nowrap;
         line-height: 1;
         text-align: center;

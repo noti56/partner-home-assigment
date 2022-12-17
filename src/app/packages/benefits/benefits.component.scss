@@ -1,12 +1,14 @@
 @import "../../../Styles/fonts.scss";
+@import "../../../Styles/sizes.scss";
 .benefits-wrapper {
   height: 100%;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  //   justify-content: space-around;
+
   padding: 0 14% 0 14%;
+
   .benefit {
     display: flex;
     align-items: center;
@@ -14,8 +16,8 @@
     width: 80%;
 
     .benefit-icon {
-      width: 50px;
-      height: 50px;
+      width: 28%;
+      // height: 40%;
     }
     .benefit-text {
       margin: 0;
@@ -23,5 +25,38 @@
       width: 50%;
       @include useFont(15px, simpler-regular);
     }
+    &:hover {
+      .benefit-icon {
+        animation: float 1s linear;
+      }
+      .benefit-text {
+        animation: flip 0.5s linear;
+      }
+    }
+  }
+}
+@keyframes float {
+  0% {
+    // box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    // box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-10px);
+  }
+  100% {
+    // box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateY(360deg);
+  }
+}
+@include small {
+  .benefits-wrapper {
+    padding: 0;
   }
 }

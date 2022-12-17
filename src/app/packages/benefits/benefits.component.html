@@ -1,10 +1,14 @@
 <div class="benefits-wrapper">
+  <!-- <div class="benefits-spaceing"> -->
   <div class="benefit" *ngFor="let benefit of benefits">
     <img
       class="benefit-icon"
       [src]="'../../../assets/images/' + benefit.icon"
       alt=""
     />
-    <p class="benefit-text">{{ benefit.text }}</p>
+    <p class="benefit-text">
+      {{ benefit.text }}
+    </p>
   </div>
+  <!-- </div> -->
 </div>

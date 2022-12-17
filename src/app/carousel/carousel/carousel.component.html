@@ -1,5 +1,4 @@
 <div class="carousel-wrapper" dir="ltr">
-  <!-- <ng-template > -->
   <div class="card-wrapper-single-package">
     <img
       (click)="previousNext(-1)"
@@ -23,12 +22,14 @@
       alt=""
     />
   </div>
-  <!-- </ng-template> -->
+
   <div class="dots">
     <div
       class="dot"
       *ngFor="let d of items; let i = index"
-      [ngClass]="{'hovered-dot':i == hoveredCardIndex}"
+      [ngClass]="{
+        'hovered-dot': i == hoveredCardIndex
+      }"
     ></div>
   </div>
 </div>

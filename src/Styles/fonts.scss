@@ -14,7 +14,7 @@
     url(../assets/fonts/simpler-regular-webfont.ttf) format("truetype");
 }
 
-@mixin useFont($fontSize, $fontName) {
-  font-size: $fontSize;
+@mixin useFont($fontSizeInPixels, $fontName) {
+  font-size: calc(100vw /1925 * #{$fontSizeInPixels});
   font-family: $fontName, Arial, Helvetica, sans-serif;
 }

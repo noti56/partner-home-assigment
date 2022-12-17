@@ -12,18 +12,18 @@
     height: 12.3%;
 
     .name-hey {
-      @include useFont(12px, simpler-black);
+      @include useFont(32, simpler-black);
     }
     .partner-keeps {
-      @include useFont(32.5px, simpler-black);
+      @include useFont(42, simpler-black);
     }
     .connected-always {
       line-height: 38px;
-      @include useFont(75px, simpler-black);
+      @include useFont(95, simpler-black);
     }
   }
   .app-carousel-pacakges {
-    height: 67%;
+    height: 64%;
   }
   footer {
     height: 19.7%;

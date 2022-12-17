@@ -21,13 +21,6 @@ interface IScreenSize {
   styleUrls: ['./carousel.component.scss'],
 })
 export class CarouselComponent implements OnInit, OnChanges {
-  @Input() itemType: ICarouselItemType | undefined;
-  @Input() items: IPackage[] = [];
-  //@Output() // לטפל בלקיחת מידע מההיתרונות הרלוונטים
-  @Output() hoverOnCardEvent = new EventEmitter<string>();
-
-  numsOfCards = 3;
-
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.calcScreenSize({
@@ -35,21 +28,24 @@ export class CarouselComponent implements OnInit, OnChanges {
       width: event.target.innerWidth,
     });
   }
+
+  @Input() itemType: ICarouselItemType | undefined;
+  @Input() items: IPackage[] = [];
+  @Output() hoverOnCardEvent = new EventEmitter<string>();
+
   currentSlide: number = 0;
   filteredItems: IPackage[] = [];
   hoveredCardIndex: number = 0;
+  numsOfCards = 3;
+
   constructor() {}
 
   calcScreenSize(screenSize: IScreenSize) {
     if (screenSize.width > 320 && screenSize.width < 640) {
-      console.log(1);
-
       this.numsOfCards = 1;
     } else if (screenSize.width > 640 && screenSize.width < 1024) {
-      console.log(2);
       this.numsOfCards = 2;
     } else if (screenSize.width > 1025) {
-      console.log(3);
       this.numsOfCards = 3;
     }
     this.setFiltered();
@@ -72,6 +68,9 @@ export class CarouselComponent implements OnInit, OnChanges {
       this.currentSlide,
       this.currentSlide + this.numsOfCards
     );
+    if (this.numsOfCards == 1) {
+      this.hoverOnCard(this.filteredItems[0]._id);
+    }
   }
 
   previousNext(amount: number) {
@@ -83,7 +82,5 @@ export class CarouselComponent implements OnInit, OnChanges {
     this.currentSlide = this.currentSlide + amount;
 
     this.setFiltered();
-    console.log(this.currentSlide);
-    console.log(this.filteredItems);
   }
 }

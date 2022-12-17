@@ -12,7 +12,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  //   justify-content: space-evenly;
+
   .card-header {
     height: 30%;
     text-align: center;
@@ -54,21 +54,15 @@
       justify-content: center;
       align-items: center;
       .coin {
-        // padding-left: 5px;
         @include useFont(38, simpler-bold);
 
         padding-top: 0.8em;
-        // align-self: flex-end;
       }
 
       .price-value {
-        // width: 23%;
         @include useFont(84, simpler-bold);
       }
       .price-decimal {
-        // align-self: flex-start;
-        // padding-bottom: 0.1em;
-        // padding-right: 1em;
         @include useFont(70, simpler-bold);
       }
     }
@@ -108,7 +102,7 @@
         @include useFont(20, simpler-regular);
         text-align: center;
         white-space: nowrap;
-        // padding:  3% 0 3% 0 ;
+
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -129,7 +123,6 @@
       flex-direction: column;
       text-align: center;
       border: $greenColor solid 1px;
-      // padding: 10%;
 
       width: 85%;
       height: 20%;
@@ -150,7 +143,7 @@
       }
       .data {
         @include useFont(18, simpler-black);
-        // white-space: nowrap;
+
         line-height: 1;
         text-align: center;
         white-space: nowrap;

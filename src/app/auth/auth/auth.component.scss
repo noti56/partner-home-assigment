@@ -1,18 +1,29 @@
+@import "../../../Styles/colors.scss";
+@import "../../../Styles/fonts.scss";
 .auth-wrapper {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  direction: ltr;
+  background-color: $pacific;
+  @include useFont(13px, simpler-regular);
 
   .form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    h1 {
+      color: white;
+      margin: 0;
+      white-space: nowrap;
+    }
     height: 30%;
     width: 50%;
+    gap: 10%;
+
     input,
     button {
       outline: none;

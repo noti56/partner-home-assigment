@@ -1,13 +1,12 @@
 <div class="auth-wrapper">
-
   <form (ngSubmit)="submitForm()" class="form">
+    <h1>Netanel Halevi's Test</h1>
     <input
-    placeholder="Type your user name"
-    (focusout)="validateField()"
-    type="text"
-    [formControl]="userName"
+      [placeholder]="texts.userNamePlaceHolder"
+      (focusout)="validateField()"
+      type="text"
+      [formControl]="userName"
     />
-    <button type="submit">Submit</button>
+    <button type="submit">{{texts.submit}}</button>
   </form>
-  
 </div>

@@ -1,8 +1,10 @@
 <div class="packages-wrapper">
   <p class="headline">
-    <span class="name-hey"> היי {{ userDataService.getUserName() }}</span>
-    <span class="partner-keeps"> פרטנר שומרת עליכם</span>
-    <span class="connected-always"> מחוברים תמיד</span>
+    <span class="name-hey">
+      {{ texts.hey }} {{ userDataService.getUserName() }}</span
+    >
+    <span class="partner-keeps"> {{ texts.partnerKeeps }}</span>
+    <span class="connected-always"> {{ texts.youConnected }}</span>
   </p>
 
   <div class="app-carousel-pacakges">

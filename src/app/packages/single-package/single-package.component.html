@@ -2,16 +2,16 @@
   <header class="card-header" [ngClass]="'white-background'">
     <span *ngIf="package.isWebExclusive" class="web-exclusive">
       <img src="../../../assets/images/yellow_icon.png" alt="" />
-      <span>בלעדי באתר!</span>
+      <span>{{ texts.webExclusive }}</span>
     </span>
     <p class="package-title" [ngClass]="'black-text'">
       {{ package.title }}
     </p>
     <p class="price">
-      <span class="coin">₪</span
+      <span class="coin">{{ texts.coin }}</span
       ><span [outerHTML]="package.pricePerMonth | price"></span>
     </p>
-    <p class="month">לחודש</p>
+    <p class="month">{{ texts.perMonth }}</p>
   </header>
   <div class="card-body">
     <ul class="details">
@@ -26,9 +26,9 @@
           alt=""
         />
       </span>
-      <span class="title">בלעדי למזמינים באתר</span>
+      <span class="title">{{ texts.webExclusiveExtra }}</span>
       <span class="data">{{ package.forWebOrders }}</span>
     </div>
-    <button class="join-button"><< להצטרפות</button>
+    <button class="join-button">{{ texts.join }}</button>
   </div>
 </div>

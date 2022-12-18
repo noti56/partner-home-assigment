@@ -18,7 +18,7 @@
       @include useFont(42, simpler-black);
     }
     .connected-always {
-      line-height: 44px;
+      line-height: .75;
       @include useFont(90, simpler-black);
     }
   }

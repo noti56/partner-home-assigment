@@ -53,3 +53,9 @@
     // right: 200px;
   }
 }
+
+@include small {
+  .carousel-wrapper {
+    background-position: right !important;
+  }
+}

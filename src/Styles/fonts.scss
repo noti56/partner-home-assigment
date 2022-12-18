@@ -19,6 +19,9 @@
   // font-size: calc(#{$fontSizeInPixels} * 0.05vw);
   font-size: calc(#{$fontSizeInPixels}vw / 20);
   font-family: $fontName, Arial, Helvetica, sans-serif;
+  @include for-phone-on-side {
+    font-size: calc(#{$fontSizeInPixels}vw / 24) !important;
+  }
   @include small {
     font-size: calc(#{$fontSizeInPixels}vw / 8) !important;
   }

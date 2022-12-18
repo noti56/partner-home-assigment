@@ -23,23 +23,23 @@
 //     @content;
 //   }
 // }
-// //   @mixin for-phone-on-side {
-// //     @media (max-height: 700px) {
-// //       @content;
-// //     }
-// //   }
+@mixin for-phone-on-side {
+  @media only screen and (orientation: landscape) {
+    @content;
+  }
+}
 @mixin small {
-  @media (max-width: 640px) and (min-width: 320px) {
+  @media (max-width: 640px) and (min-width: 320px) and (orientation: portrait) {
     @content;
   }
 }
 @mixin medium {
-  @media (max-width: 1024px) and (min-width: 641px) {
+  @media (max-width: 1024px) and (min-width: 641px) and (orientation: portrait) {
     @content;
   }
 }
 @mixin large {
-  @media (min-width: 1025px) {
+  @media (min-width: 1025px) and (orientation: portrait) {
     @content;
   }
 }
